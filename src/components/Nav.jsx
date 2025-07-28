@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faCircleInfo, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 import '../styles/Nav.css';
 
 
-export default function Nav() {
+export default function Nav(props) {
+    function handleClick() {
+        props.setDisplay('flex');
+    }
 
   return (
     <div className='nav'>
@@ -15,6 +19,7 @@ export default function Nav() {
                 <Button 
                     text='General Information'
                     icon={ <FontAwesomeIcon icon={ faCircleInfo } /> } 
+                    handleClick={ handleClick }
                 />
             </li>
             <li>
@@ -33,13 +38,13 @@ export default function Nav() {
         </div>
       </ul>
     </div>
-  )
+  );
 }
 
 function Button(props) {
     return (
         <>
-            <button>{props.text} {props.icon}</button>
+            <button onClick={props.handleClick}>{props.text} {props.icon}</button>
         </>
     )
 }

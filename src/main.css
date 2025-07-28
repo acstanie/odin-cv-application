@@ -8,3 +8,11 @@
 body {
     background-color: #FFEAEA;
 }
+
+#root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}

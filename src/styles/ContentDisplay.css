@@ -1,0 +1,37 @@
+.content-display {
+    flex: 1;
+
+    display: flex; 
+    justify-content: space-between;  
+
+    margin: 20px 32px;
+}
+
+.left-content {
+    padding: 8px;
+    border: 1px solid black;
+    width: 49%;
+
+    border-radius: 16px 0 0 16px;
+}
+
+.display-header {
+    border-bottom: 1px solid black;
+}
+
+.display-header > h1, p {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.display-header > p {
+    margin-bottom: 8px;
+}
+
+.right-content {
+    padding: 8px;
+    border: 1px solid black;
+    width: 49%;
+
+    border-radius: 0 16px 16px 0;
+}
