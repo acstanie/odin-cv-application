@@ -8,37 +8,44 @@ import '../styles/Nav.css';
 export default function Nav(props) {
     function handleClick() {
         props.setDisplay('flex');
+        props.setEduDisplay('none');
     }
 
-  return (
-    <div className='nav'>
-      <ul>
-        <li>CV Application</li>
-        <div className='nav-btns'>
-            <li>
-                <Button 
-                    text='General Information'
-                    icon={ <FontAwesomeIcon icon={ faCircleInfo } /> } 
-                    handleClick={ handleClick }
-                />
-            </li>
-            <li>
-                <Button 
-                    text='Educational Experience' 
-                    icon={ <FontAwesomeIcon icon={ faGraduationCap } /> }
-                />
-            </li>
-            <li>
-                <Button 
-                    text='Practical Experience'
-                    icon={ <FontAwesomeIcon icon={ faBriefcase } /> } 
-                
-                />
-            </li>
+    function handleEduClick() {
+        props.setEduDisplay('flex');
+        props.setDisplay('none');
+    }
+
+    return (
+        <div className='nav'>
+        <ul>
+            <li>CV Application</li>
+            <div className='nav-btns'>
+                <li>
+                    <Button 
+                        text='General Information'
+                        icon={ <FontAwesomeIcon icon={ faCircleInfo } /> } 
+                        handleClick={ handleClick }
+                    />
+                </li>
+                <li>
+                    <Button 
+                        text='Educational Experience' 
+                        icon={ <FontAwesomeIcon icon={ faGraduationCap } /> }
+                        handleClick={ handleEduClick }
+                    />
+                </li>
+                <li>
+                    <Button 
+                        text='Practical Experience'
+                        icon={ <FontAwesomeIcon icon={ faBriefcase } /> } 
+                    
+                    />
+                </li>
+            </div>
+        </ul>
         </div>
-      </ul>
-    </div>
-  );
+    );
 }
 
 function Button(props) {

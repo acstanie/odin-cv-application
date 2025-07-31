@@ -1,0 +1,11 @@
+.edu-exp {
+    margin-top: 12px;
+}
+
+.edu-exp-content {
+    margin-top: 8px;
+}
+
+.edu-exp-content > p {
+    text-align: left;
+}

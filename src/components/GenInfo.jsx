@@ -52,8 +52,8 @@ function GenInfoForm(props) {
     }
 
     return (
-        <div className="gen-info-form" onSubmit={ handleSubmit }>
-            <form>
+        <div className="gen-info-form" >
+            <form onSubmit={ handleSubmit }>
                 <label htmlFor="name">Name: </label>
                 <input type="text" name="name" id="name" value={ nameInput } onChange={ handleNameChange }/>
                 <br />

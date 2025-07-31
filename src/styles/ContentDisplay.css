@@ -2,21 +2,22 @@
     flex: 1;
 
     display: flex; 
-    justify-content: space-between;  
+    justify-content: center;  
 
     margin: 20px 32px;
 }
 
-.left-content {
-    padding: 8px;
-    border: 1px solid black;
-    width: 49%;
+.content {
+    padding: 32px;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 4px 4px 4px -4px rgba(0, 0, 0, 0.6);
 
-    border-radius: 16px 0 0 16px;
+    border-radius: 16px;
 }
 
 .display-header {
-    border-bottom: 1px solid black;
+    margin-bottom: 40px;
 }
 
 .display-header > h1, p {
@@ -26,12 +27,4 @@
 
 .display-header > p {
     margin-bottom: 8px;
-}
-
-.right-content {
-    padding: 8px;
-    border: 1px solid black;
-    width: 49%;
-
-    border-radius: 0 16px 16px 0;
 }
