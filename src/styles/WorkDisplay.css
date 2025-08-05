@@ -1,0 +1,7 @@
+.work {
+    margin-top: 12px;
+}
+
+.work > p {
+    text-align: left;
+}

@@ -9,11 +9,20 @@ export default function Nav(props) {
     function handleClick() {
         props.setDisplay('flex');
         props.setEduDisplay('none');
+        props.setWorkDisplay('none')
     }
 
     function handleEduClick() {
         props.setEduDisplay('flex');
         props.setDisplay('none');
+        props.setWorkDisplay('none')
+    }
+
+    function handleWorkClick() {
+        props.setWorkDisplay('flex')
+        props.setDisplay('none');
+        props.setEduDisplay('none');
+       
     }
 
     return (
@@ -39,6 +48,7 @@ export default function Nav(props) {
                     <Button 
                         text='Practical Experience'
                         icon={ <FontAwesomeIcon icon={ faBriefcase } /> } 
+                        handleClick={ handleWorkClick }
                     
                     />
                 </li>
